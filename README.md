@@ -33,8 +33,13 @@ git clone https://github.com/Nex404/conky_desktop.git
 mv conky .conky
 cd .conky
 nano conky-startup.sh
+chmod +x conky-startup.sh
 ```
 You can disable the day counter in the conky-startup.sh by removing the .conkyrc2 part or commenting with #
+
+#### Start Conky by comandline 
+
+#### Start Conky by System boot
 
 ### 2. Option: install ConkyManager
 
