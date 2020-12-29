@@ -6,8 +6,11 @@ Probably you would ask, why the daycounter. I've read a book called "The big fiv
 
 ![alt text](https://github.com/Nex404/conky_desktop/blob/master/images/image.png)
 
+Of course it will appear in your system laguage and not in German.
+
 ## Installation of Conky
-For the installation of conky you have 2 Options. #1 is to just install conky and #2 is to also install the conky manager, who helps you to setup everything. 
+For the installation of conky you have 2 Options.   
+No. 1 is to just install conky and No. 2 is to also install the conky manager, who helps you to setup everything. 
 
 ### Installing conky (must do)
 ```
@@ -20,13 +23,13 @@ If there appears a version you made everything right
 
 
 ### 1. Option: Manual usage of conky 
-copy repository
-move conky folder to home directory and rename to ".conky"
-go into the folder 
-open the conky-startup.sh
-change all "YOUR_SYSTEM" to your system name (prob change in file to ~/ )
-also change the cores to your number of cores
-
+copy repository   
+move conky folder to home directory and rename to ".conky"   
+go into the folder   
+open the conky-startup.sh   
+change all "YOUR_SYSTEM" to your system name (prob change in file to ~/ )   
+also change the cores to your number of cores   
+change the script to be executable
 ```
 cd
 git clone https://github.com/Nex404/conky_desktop.git
@@ -37,12 +40,35 @@ chmod +x conky-startup.sh
 ```
 You can disable the day counter in the conky-startup.sh by removing the .conkyrc2 part or commenting with #
 
-#### Start Conky by comandline 
+#### Start Conky by comandline
+```
+cd 
+cd .conky
+./conky-startup.sh
+``` 
 
 #### Start Conky by System boot
+Go to your home directory and into your user configs. Go into folder upstart (autostart in German). Write the following into a file and save it as conky.conf . Reboot and it should appear after 20 sec.
+
+```
+cd 
+cd .config
+cd upstart
+touch conky.conf
+nano conky.conf
+
+#Write the following into the file
+start on startup
+task
+exec /home/YOUR_SYSTEM_NAME/.conky/conky-startup.sh
+
+#after that reboot
+reboot
+```
+
 
 ### 2. Option: install ConkyManager
-
+In Conky Manager you can just click the widget you want to appear. You also can add those to system startup by editing the configurations in conky manager.
 ```
 $ sudo add-apt-repository ppa:mark-pcnetspec/conky-manager-pm9
 $ sudo apt-get update
