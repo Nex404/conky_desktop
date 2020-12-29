@@ -33,6 +33,8 @@ change the script to be executable
 ```
 cd
 git clone https://github.com/Nex404/conky_desktop.git
+cd conky_desktop
+mv conky ../
 mv conky .conky
 cd .conky
 nano conky-startup.sh
@@ -40,7 +42,7 @@ chmod +x conky-startup.sh
 ```
 You can disable the day counter in the conky-startup.sh by removing the .conkyrc2 part or commenting with #
 
-#### Start Conky by comandline
+#### Start Conky by comand
 ```
 cd 
 cd .conky
@@ -68,13 +70,21 @@ reboot
 
 
 ### 2. Option: install ConkyManager
-In Conky Manager you can just click the widget you want to appear. You also can add those to system startup by editing the configurations in conky manager.
+In Conky Manager you can just click the widget you want to appear. You also can add those to system startup by editing the configurations in conky manager.   
 ```
 $ sudo add-apt-repository ppa:mark-pcnetspec/conky-manager-pm9
 $ sudo apt-get update
 $ sudo apt-get install conky-manager
 $ conky-manager
 ```
+You still have to download the repository and move the widgets to the .conky folder
+```
+# in your prefered folder
+git clone https://github.com/Nex404/conky_desktop.git
+cd conky_desktop/conky
+mv .conkyrc1 .conkyrc2 ~/.conky
+```
+
 
 ## Set background
 go to the image folder of the repository and set the 143740.jpg as background
