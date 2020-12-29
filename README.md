@@ -4,7 +4,7 @@
 You can see the look of the desktop folowing.   
 Probably you would ask, why the daycounter. I've read a book called "The big five for life" and it has shown me that the days we waste are to many. This widget is to remember, that every day is precious and we should be happy in life. So make the best out of your day and try to be happy.   
 
-![alt text](https://github.com/Nex404/conky_desktop/blob/master/image.jpg?raw=true)
+![alt text](https://github.com/Nex404/conky_desktop/blob/master/images/image.png)
 
 ## Installation of Conky
 For the installation of conky you have 2 Options. #1 is to just install conky and #2 is to also install the conky manager, who helps you to setup everything. 
